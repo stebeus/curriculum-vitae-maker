@@ -1,5 +1,5 @@
 function Link({ to = '/', isExternal, children }) {
-  const path = isExternal ? { href: `https://${to}` } : to;
+  const path = { href: isExternal ? `https://${to}` : to };
 
   const targetBlank = isExternal && {
     target: '_blank',
