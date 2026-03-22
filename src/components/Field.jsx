@@ -1,5 +1,3 @@
-import { formatLabel } from '../utils/formatters.js';
-
 function createFieldData([name, type]) {
   const state = { name, type };
   return { ...state };
@@ -7,11 +5,11 @@ function createFieldData([name, type]) {
 
 const createManyFields = (...fields) => fields.map(createFieldData);
 
-function Field({ name, type }) {
+function Field({ label, id, type }) {
   return (
     <div className="field">
-      <label htmlFor={name}>{formatLabel(name)}: </label>
-      <input type={type} name={name} id={name} />
+      <label htmlFor={id}>{label}: </label>
+      <input type={type} id={id} />
     </div>
   );
 }
