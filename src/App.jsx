@@ -17,10 +17,10 @@ export function App() {
       <footer>
         <p>
           © Stebeus 2025.
-          <Link to="https://opensource.org/license/mit" isExternal={true}>
+          <Link to="opensource.org/license/mit" isExternal={true}>
             MIT License
           </Link>
-          <Link to="https://github.com/stebeus" isExternal={true}>
+          <Link to="github.com/stebeus" isExternal={true}>
             GitHub
           </Link>
         </p>

@@ -1,11 +1,13 @@
 function Link({ to, isExternal, children }) {
+  const path = isExternal ? { href: `https://${to}` } : to;
+
   const targetBlank = isExternal && {
     target: '_blank',
     rel: 'noopener noreferrer',
   };
 
   return (
-    <a href={to} {...targetBlank}>
+    <a {...path} {...targetBlank}>
       {children}
     </a>
   );
