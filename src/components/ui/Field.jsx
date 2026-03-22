@@ -5,7 +5,7 @@ function createFieldData(...fields) {
 
 function Field({ label, type }) {
   return (
-    <label>
+    <label className="field">
       {label}: <input type={type} name={label} />
     </label>
   );
