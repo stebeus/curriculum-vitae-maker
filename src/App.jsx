@@ -1,3 +1,6 @@
+import { Form } from './components/Form.jsx';
+import { UserActions } from './components/UserActions.jsx';
+
 export function App() {
   return (
     <>
@@ -6,6 +9,10 @@ export function App() {
           <a href="/">Curriculum vitae maker</a>
         </h1>
       </header>
+      <main>
+        <UserActions />
+        <Form />
+      </main>
     </>
   );
 }
