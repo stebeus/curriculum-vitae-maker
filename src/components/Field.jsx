@@ -1,5 +1,10 @@
 import { formatLabel } from '../utils/formatters.js';
 
+function createFieldData(name, type) {
+  const state = { name, type };
+  return { ...state };
+}
+
 function Field({ name, type }) {
   return (
     <div className="field">
