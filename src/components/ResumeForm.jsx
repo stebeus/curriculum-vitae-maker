@@ -1,6 +1,6 @@
 import { createFieldsetData, Fieldset } from './Fieldset.jsx';
 
-function Form() {
+function ResumeForm() {
   const personalDetails = [
     'Personal details',
     ['full-name', 'text'],
@@ -35,4 +35,4 @@ function Form() {
   return <form>{fieldsets.map(createFieldset)}</form>;
 }
 
-export { Form };
+export { ResumeForm };
