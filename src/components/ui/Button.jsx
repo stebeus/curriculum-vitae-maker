@@ -1,18 +1,22 @@
-function createButtonData([dataAttrName, dataAttrValue, handler, children]) {
-  const state = { dataAttrName, dataAttrValue, handler, children };
-  return { ...state };
+function createButtonData(...buttons) {
+  const createButton = ([dataAttrName, attrValue, handler, children]) => ({
+    dataAttrName,
+    attrValue,
+    handler,
+    children,
+  });
+
+  return buttons.map(createButton);
 }
 
-const createManyButtons = (...buttons) => buttons.map(createButtonData);
-
-function Button({ dataAttrName, dataAttrValue, handler, children }) {
-  const dataProps = { [`data-${dataAttrName}`]: dataAttrValue };
+function Button({ dataAttrName, attrValue, handler, children }) {
+  const dataAttr = { [`data-${dataAttrName}`]: attrValue };
 
   return (
-    <button type="button" {...dataProps} onClick={handler}>
+    <button type="button" {...dataAttr} onClick={handler}>
       {children}
     </button>
   );
 }
 
-export { Button, createManyButtons };
+export { Button, createButtonData };

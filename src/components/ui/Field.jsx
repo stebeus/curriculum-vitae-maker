@@ -1,17 +1,14 @@
-function createFieldData([label, id, type]) {
-  const state = { label, id, type };
-  return { ...state };
+function createFieldData(...fields) {
+  const createField = ([label, type]) => ({ label, type });
+  return fields.map(createField);
 }
 
-const createManyFields = (...fields) => fields.map(createFieldData);
-
-function Field({ label, id, type }) {
+function Field({ label, type }) {
   return (
-    <div className="field">
-      <label htmlFor={id}>{label}: </label>
-      <input type={type} id={id} />
-    </div>
+    <label>
+      {label}: <input type={type} name={label} />
+    </label>
   );
 }
 
-export { createManyFields, Field };
+export { createFieldData, Field };
