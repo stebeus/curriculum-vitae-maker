@@ -1,5 +1,5 @@
 import { keyId } from '../utils/generators.js';
-import { createManyFields, Field } from './Field.jsx';
+import { createManyFields, Field } from './ui/Field.jsx';
 
 function createFieldsetData([legend, ...fieldsData]) {
   const fields = createManyFields(...fieldsData);
