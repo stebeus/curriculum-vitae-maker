@@ -3,6 +3,6 @@ function* generateId() {
   while (true) yield id++;
 }
 
-const id = generateId();
+const keyId = generateId();
 
-export { id };
+export { keyId };

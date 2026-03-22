@@ -1,4 +1,4 @@
-import { id } from '../utils/generators.js';
+import { keyId } from '../utils/generators.js';
 import { createManyFields, Field } from './Field.jsx';
 
 function createFieldsetData([legend, ...fieldsData]) {
@@ -11,7 +11,7 @@ const createManyFieldsets = (...fieldsets) => fieldsets.map(createFieldsetData);
 
 function Fieldset({ legend, fields }) {
   const createField = ({ id, label, type }) => (
-    <Field key={id.next().value} id={id} label={label} type={type} />
+    <Field key={keyId.next().value} id={id} label={label} type={type} />
   );
 
   return (
