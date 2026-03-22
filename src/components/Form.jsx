@@ -4,9 +4,9 @@ import { createManyFieldsets, Fieldset } from './Fieldset.jsx';
 function Form() {
   const personalDetails = [
     'Personal details',
-    ['Full name, full-name', 'text'],
-    ['Email, email', 'email'],
-    ['Phone number, phone-number', 'tel'],
+    ['Full name', 'full-name', 'text'],
+    ['Email', 'email', 'email'],
+    ['Phone number', 'phone-number', 'tel'],
   ];
 
   const education = [
