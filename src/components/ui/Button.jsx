@@ -1,5 +1,6 @@
 function createButtonData(...buttons) {
   const createButton = ([dataAttrName, attrValue, handler, children]) => ({
+    key: crypto.randomUUID(),
     dataAttrName,
     attrValue,
     handler,

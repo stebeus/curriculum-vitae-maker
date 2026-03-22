@@ -1,4 +1,3 @@
-import { getKeyId } from '../utils/generators.js';
 import { createFieldsetData, Fieldset } from './Fieldset.jsx';
 
 function Form() {
@@ -29,8 +28,8 @@ function Form() {
 
   const fieldsets = createFieldsetData(personalDetails, education, experience);
 
-  const createFieldset = ({ legend, fields }) => (
-    <Fieldset key={getKeyId()} legend={legend} fields={fields} />
+  const createFieldset = ({ key, legend, fields }) => (
+    <Fieldset key={key} legend={legend} fields={fields} />
   );
 
   return <form> {fieldsets.map(createFieldset)}</form>;

@@ -1,4 +1,3 @@
-import { getKeyId } from '../utils/generators.js';
 import { Button, createButtonData } from './ui/Button.jsx';
 
 function EditMenu() {
@@ -7,9 +6,15 @@ function EditMenu() {
     ['download', 'resume.pdf', 'downloadResume', 'Download'],
   );
 
-  const createButton = ({ dataAttrName, attrValue, handler, children }) => (
+  const createButton = ({
+    key,
+    dataAttrName,
+    attrValue,
+    handler,
+    children,
+  }) => (
     <Button
-      key={getKeyId()}
+      key={key}
       dataAttrName={dataAttrName}
       attrValue={attrValue}
       handler={handler}

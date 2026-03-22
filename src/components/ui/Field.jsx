@@ -1,5 +1,10 @@
 function createFieldData(...fields) {
-  const createField = ([label, type]) => ({ label, type });
+  const createField = ([label, type]) => ({
+    key: crypto.randomUUID(),
+    label,
+    type,
+  });
+
   return fields.map(createField);
 }
 

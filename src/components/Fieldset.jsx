@@ -1,8 +1,8 @@
-import { getKeyId } from '../utils/generators.js';
 import { createFieldData, Field } from './ui/Field.jsx';
 
 function createFieldsetData(...fieldsets) {
   const createFieldset = ([legend, ...fields]) => ({
+    key: crypto.randomUUID(),
     legend,
     fields: createFieldData(...fields),
   });
@@ -11,8 +11,8 @@ function createFieldsetData(...fieldsets) {
 }
 
 function Fieldset({ legend, fields }) {
-  const createField = ({ label, type }) => (
-    <Field key={getKeyId()} label={label} type={type} />
+  const createField = ({ key, label, type }) => (
+    <Field key={key} label={label} type={type} />
   );
 
   return (
