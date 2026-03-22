@@ -32,7 +32,7 @@ function Form() {
     <Fieldset key={key} legend={legend} fields={fields} />
   );
 
-  return <form> {fieldsets.map(createFieldset)}</form>;
+  return <form>{fieldsets.map(createFieldset)}</form>;
 }
 
 export { Form };
