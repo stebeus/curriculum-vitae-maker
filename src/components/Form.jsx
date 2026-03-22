@@ -6,24 +6,24 @@ function Form() {
     'Personal details',
     ['Full name', 'full-name', 'text'],
     ['Email', 'email', 'email'],
-    ['Phone number', 'phone-number', 'tel'],
+    ['Phone number', 'phone', 'tel'],
   ];
 
   const education = [
     'Education',
     ['School', 'school', 'text'],
     ['Degree', 'degree', 'text'],
-    ['Start date', 'study-start-date', 'date'],
-    ['End date', 'study-end-date', 'date'],
+    ['Start date', 'study-start', 'date'],
+    ['End date', 'study-end', 'date'],
   ];
 
   const experience = [
     'Experience',
-    ['Company name', 'company-name', 'text'],
-    ['Position title', 'position-title', 'text'],
-    ['Main responsibilities', 'main-responsibilities', 'text'],
-    ['Start date', 'job-start-date', 'date'],
-    ['End date', 'job-end-date', 'date'],
+    ['Company name', 'company', 'text'],
+    ['Position title', 'position', 'text'],
+    ['Main responsibilities', 'responsibilities', 'text'],
+    ['Start date', 'job-start', 'date'],
+    ['End date', 'job-end', 'date'],
   ];
 
   const fieldsets = createManyFieldsets(personalDetails, education, experience);
