@@ -2,7 +2,7 @@ import { id } from '../utils/generators.js';
 import { createManyFields, Field } from './Field.jsx';
 
 function createFieldsetData([legend, ...fieldsData]) {
-  const fields = createManyFields(fieldsData);
+  const fields = createManyFields(...fieldsData);
   const state = { legend, fields };
   return { ...state };
 }
