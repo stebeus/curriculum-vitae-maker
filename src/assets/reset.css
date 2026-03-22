@@ -65,11 +65,13 @@ input,
 select,
 textarea {
   font: inherit;
+}
 
-  label,
-  &:not(textarea) {
-    cursor: pointer;
-  }
+button,
+input:is([type='checkbox'], [type='radio']),
+label,
+select {
+  cursor: pointer;
 }
 
 /* || TEXT */
