@@ -1,9 +1,11 @@
 import { formatLabel } from '../utils/formatters.js';
 
-function createFieldData(name, type) {
+function createFieldData([name, type]) {
   const state = { name, type };
   return { ...state };
 }
+
+const createManyFields = (...fields) => fields.map(createFieldData);
 
 function Field({ name, type }) {
   return (
@@ -14,4 +16,4 @@ function Field({ name, type }) {
   );
 }
 
-export { Field };
+export { createManyFields, Field };
