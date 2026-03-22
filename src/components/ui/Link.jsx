@@ -1,5 +1,6 @@
-function Link({ to = '/index.html', children }) {
-  const isExternal = to.includes('https://');
+function Link({ to = '/', children }) {
+  const protocols = /http|https/;
+  const isExternal = protocols.test(`${to}//:`);
 
   const targetBlank = isExternal && {
     target: '_blank',
