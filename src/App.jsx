@@ -7,7 +7,7 @@ export function App() {
     <>
       <header>
         <h1 className="logo">
-          <a href="/">Curriculum vitae maker</a>
+          <Link>Curriculum vitae maker</Link>
         </h1>
       </header>
       <main>

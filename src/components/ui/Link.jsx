@@ -1,4 +1,4 @@
-function Link({ to, isExternal, children }) {
+function Link({ to = '/', isExternal, children }) {
   const path = isExternal ? { href: `https://${to}` } : to;
 
   const targetBlank = isExternal && {
