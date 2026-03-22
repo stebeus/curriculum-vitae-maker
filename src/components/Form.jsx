@@ -1,4 +1,4 @@
-import { generateId } from '../utils/generators.js';
+import { keyId } from '../utils/generators.js';
 import { createManyFieldsets, Fieldset } from './Fieldset.jsx';
 
 function Form() {
@@ -28,10 +28,9 @@ function Form() {
 
   const fieldsets = createManyFieldsets(personalDetails, education, experience);
 
-  const createFieldset = ({ legend, fields }) => {
-    const id = generateId();
-    return <Fieldset key={id.next().value} legend={legend} fields={fields} />;
-  };
+  const createFieldset = ({ legend, fields }) => (
+    <Fieldset key={keyId.next().value} legend={legend} fields={fields} />
+  );
 
   return <form>{fieldsets.map(createFieldset)}</form>;
 }
