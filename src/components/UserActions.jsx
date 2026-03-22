@@ -1,3 +1,4 @@
+import { keyId } from '../utils/generators.js';
 import { Button, createManyButtons } from './ui/Button.jsx';
 
 function UserActions() {
@@ -8,6 +9,7 @@ function UserActions() {
 
   const createButton = ({ dataAttrName, dataAttrValue, handler, children }) => (
     <Button
+      key={keyId.next().value}
       dataAttrName={dataAttrName}
       dataAttrValue={dataAttrValue}
       onClick={handler}
