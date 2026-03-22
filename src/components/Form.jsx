@@ -4,26 +4,26 @@ import { createManyFieldsets, Fieldset } from './Fieldset.jsx';
 function Form() {
   const personalDetails = [
     'Personal details',
-    ['Full name', 'text'],
-    ['Email', 'email'],
-    ['Phone number', 'tel'],
+    ['Full name, full-name', 'text'],
+    ['Email, email', 'email'],
+    ['Phone number, phone-number', 'tel'],
   ];
 
   const education = [
     'Education',
-    ['School', 'text'],
-    ['Degree', 'text'],
-    ['Start date', 'date'],
-    ['End date', 'date'],
+    ['School', 'school', 'text'],
+    ['Degree', 'degree', 'text'],
+    ['Start date', 'study-start-date', 'date'],
+    ['End date', 'study-end-date', 'date'],
   ];
 
   const experience = [
     'Experience',
-    ['Company name', 'text'],
-    ['Position title', 'text'],
-    ['Main responsibilities', 'text'],
-    ['Start date', 'date'],
-    ['End date', 'date'],
+    ['Company name', 'company-name', 'text'],
+    ['Position title', 'position-title', 'text'],
+    ['Main responsibilities', 'main-responsibilities', 'text'],
+    ['Start date', 'job-start-date', 'date'],
+    ['End date', 'job-end-date', 'date'],
   ];
 
   const fieldsets = createManyFieldsets(personalDetails, education, experience);
