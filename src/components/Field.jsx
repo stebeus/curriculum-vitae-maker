@@ -1,5 +1,5 @@
-function createFieldData([name, type]) {
-  const state = { name, type };
+function createFieldData([label, id, type]) {
+  const state = { label, id, type };
   return { ...state };
 }
 
