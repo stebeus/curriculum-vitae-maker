@@ -1,4 +1,4 @@
-function Link({ to = '/', children }) {
+function Link({ to = '/index.html', children }) {
   const isExternal = to.includes('https://');
 
   const targetBlank = isExternal && {
