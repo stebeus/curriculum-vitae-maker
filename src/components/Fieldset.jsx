@@ -1,17 +1,18 @@
-import { keyId } from '../utils/generators.js';
-import { createManyFields, Field } from './ui/Field.jsx';
+import { getKeyId } from '../utils/generators.js';
+import { createFieldData, Field } from './ui/Field.jsx';
 
-function createFieldsetData([legend, ...fieldsData]) {
-  const fields = createManyFields(...fieldsData);
-  const state = { legend, fields };
-  return { ...state };
+function createFieldsetData(...fieldsets) {
+  const createFieldset = ([legend, ...fields]) => ({
+    legend,
+    fields: createFieldData(...fields),
+  });
+
+  return fieldsets.map(createFieldset);
 }
 
-const createManyFieldsets = (...fieldsets) => fieldsets.map(createFieldsetData);
-
 function Fieldset({ legend, fields }) {
-  const createField = ({ label, id, type }) => (
-    <Field key={keyId.next().value} label={label} id={id} type={type} />
+  const createField = ({ label, type }) => (
+    <Field key={getKeyId()} label={label} type={type} />
   );
 
   return (
@@ -22,4 +23,4 @@ function Fieldset({ legend, fields }) {
   );
 }
 
-export { createManyFieldsets, Fieldset };
+export { createFieldsetData, Fieldset };

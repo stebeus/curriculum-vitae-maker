@@ -1,38 +1,39 @@
-import { keyId } from '../utils/generators.js';
-import { createManyFieldsets, Fieldset } from './Fieldset.jsx';
+import { getKeyId } from '../utils/generators.js';
+import { createFieldsetData, Fieldset } from './Fieldset.jsx';
 
 function Form() {
   const personalDetails = [
     'Personal details',
-    ['Full name', 'full-name', 'text'],
-    ['Email', 'email', 'email'],
-    ['Phone number', 'phone', 'tel'],
+    ['full-name', 'text'],
+    ['email', 'email'],
+    ['phone-number', 'tel'],
+    ['address', 'text'],
   ];
 
   const education = [
     'Education',
-    ['School', 'school', 'text'],
-    ['Degree', 'degree', 'text'],
-    ['Start date', 'study-start', 'date'],
-    ['End date', 'study-end', 'date'],
+    ['school', 'text'],
+    ['field-of-study', 'text'],
+    ['start-date', 'date'],
+    ['end-date', 'date'],
   ];
 
   const experience = [
     'Experience',
-    ['Company name', 'company', 'text'],
-    ['Position title', 'position', 'text'],
-    ['Main responsibilities', 'responsibilities', 'text'],
-    ['Start date', 'job-start', 'date'],
-    ['End date', 'job-end', 'date'],
+    ['company', 'text'],
+    ['position-title', 'text'],
+    ['responsibilities', 'text'],
+    ['start-date', 'date'],
+    ['end-date', 'date'],
   ];
 
-  const fieldsets = createManyFieldsets(personalDetails, education, experience);
+  const fieldsets = createFieldsetData(personalDetails, education, experience);
 
   const createFieldset = ({ legend, fields }) => (
-    <Fieldset key={keyId.next().value} legend={legend} fields={fields} />
+    <Fieldset key={getKeyId()} legend={legend} fields={fields} />
   );
 
-  return <form>{fieldsets.map(createFieldset)}</form>;
+  return <form> {fieldsets.map(createFieldset)}</form>;
 }
 
 export { Form };

@@ -1,24 +1,24 @@
-import { keyId } from '../utils/generators.js';
-import { Button, createManyButtons } from './ui/Button.jsx';
+import { getKeyId } from '../utils/generators.js';
+import { Button, createButtonData } from './ui/Button.jsx';
 
 function UserActions() {
-  const buttons = createManyButtons(
-    ['action', 'clear', 'clearForm', 'Clear resume'],
-    ['download', 'curriculum.html', 'downloadFile', 'Download'],
+  const buttons = createButtonData(
+    ['action', 'clear', 'clearResume', 'Clear resume'],
+    ['download', 'resume.pdf', 'downloadResume', 'Download'],
   );
 
-  const createButton = ({ dataAttrName, dataAttrValue, handler, children }) => (
+  const createButton = ({ dataAttrName, attrValue, handler, children }) => (
     <Button
-      key={keyId.next().value}
+      key={getKeyId()}
       dataAttrName={dataAttrName}
-      dataAttrValue={dataAttrValue}
-      onClick={handler}
+      attrValue={attrValue}
+      handler={handler}
     >
       {children}
     </Button>
   );
 
-  return <div className="actions">{buttons.map(createButton)}</div>;
+  return <div className="edit-menu">{buttons.map(createButton)}</div>;
 }
 
 export { UserActions };
