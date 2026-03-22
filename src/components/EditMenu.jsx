@@ -1,7 +1,7 @@
 import { getKeyId } from '../utils/generators.js';
 import { Button, createButtonData } from './ui/Button.jsx';
 
-function UserActions() {
+function EditMenu() {
   const buttons = createButtonData(
     ['action', 'clear', 'clearResume', 'Clear resume'],
     ['download', 'resume.pdf', 'downloadResume', 'Download'],
@@ -21,4 +21,4 @@ function UserActions() {
   return <div className="edit-menu">{buttons.map(createButton)}</div>;
 }
 
-export { UserActions };
+export { EditMenu };
