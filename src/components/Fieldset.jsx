@@ -10,7 +10,7 @@ function createFieldsetData([legend, ...fieldsData]) {
 const createManyFieldsets = (...fieldsets) => fieldsets.map(createFieldsetData);
 
 function Fieldset({ legend, fields }) {
-  const createField = ({ id, label, type }) => (
+  const createField = ({ label, id, type }) => (
     <Field key={keyId.next().value} id={id} label={label} type={type} />
   );
 
