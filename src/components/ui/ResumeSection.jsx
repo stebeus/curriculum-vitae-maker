@@ -1,9 +1,9 @@
-function ResumeSection({ title, subtitle, dates, children }) {
+function ResumeSection({ titleId, subtitle, dates, children }) {
   const [startDate, endDate] = dates;
 
   return (
-    <section id={title}>
-      <h2>{title}</h2>
+    <section id={titleId}>
+      <h2>{titleId}</h2>
       <h3>{subtitle}</h3>
       {children}
       <p className="dates">
