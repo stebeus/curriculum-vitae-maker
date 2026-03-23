@@ -6,4 +6,11 @@ function Field({ name, type }) {
   );
 }
 
-export { Field };
+const createFieldData = (...fields) =>
+  fields.map(([name, type = name]) => ({
+    keyId: crypto.randomUUID(),
+    name,
+    type,
+  }));
+
+export { createFieldData, Field };
