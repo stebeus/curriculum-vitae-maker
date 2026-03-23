@@ -3,8 +3,8 @@ function ResumeSection({ titleId, subtitle, dates, children }) {
 
   return (
     <section id={titleId}>
-      <h2>{titleId}</h2>
-      <h3>{subtitle}</h3>
+      <h3>{titleId}</h3>
+      <h4>{subtitle}</h4>
       {children}
       <p className="dates">
         {startDate} – {endDate}
