@@ -1,4 +1,5 @@
-import { Link } from './components/Link.jsx';
+import { Form } from './components/Form.jsx';
+import { Link } from './components/ui/Link.jsx';
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
           <Link>Curriculum vitae maker</Link>
         </h1>
       </header>
-      <main></main>
+      <main>
+        <Form />
+      </main>
       <footer>
         <p>
           {`© Stebeus 2025. `}
