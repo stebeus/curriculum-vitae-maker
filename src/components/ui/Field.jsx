@@ -1,5 +1,5 @@
-function Field({ name, type }) {
-  const props = { name };
+function Field({ name, type, hasReadOnlyProp }) {
+  const props = { name, readOnly: hasReadOnlyProp };
 
   const input = <input type={type} {...props} />;
   const textarea = <textarea {...props}></textarea>;
