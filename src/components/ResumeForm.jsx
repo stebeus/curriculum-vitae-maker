@@ -20,7 +20,7 @@ function ResumeForm() {
   const experience = [
     'Experience',
     ['company', 'text'],
-    ['position-title', 'text'],
+    ['position', 'text'],
     ['responsibilities', 'text'],
     ['start-date', 'date'],
     ['end-date', 'date'],
