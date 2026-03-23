@@ -1,4 +1,4 @@
-import { createFieldData, Field } from './ui/Field.jsx';
+import { createFieldData, Field } from './components/Field.jsx';
 
 const createFieldsetData = (...fieldsets) =>
   fieldsets.map(([legend, ...fields]) => ({

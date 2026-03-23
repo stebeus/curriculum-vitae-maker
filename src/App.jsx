@@ -1,8 +1,8 @@
-import { EditMenu } from './components/EditMenu.jsx';
-import { ResumeForm } from './components/ResumeForm.jsx';
-import { ResumePreview } from './components/ResumePreview.jsx';
-import { Link } from './components/ui/Link.jsx';
-import { Pane } from './components/ui/Pane.jsx';
+import { Link } from './components/Link.jsx';
+import { Pane } from './components/Pane.jsx';
+import { EditMenu } from './features/editor/EditMenu.jsx';
+import { ResumeForm } from './features/editor/ResumeForm.jsx';
+import { ResumePreview } from './features/preview/ResumePreview.jsx';
 
 export function App() {
   return (

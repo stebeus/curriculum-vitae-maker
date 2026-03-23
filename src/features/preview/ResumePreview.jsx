@@ -1,5 +1,5 @@
-import { ContactInfo } from './ui/ContactInfo.jsx';
-import { ResumeSection } from './ui/ResumeSection.jsx';
+import { ContactInfo } from './components/ContactInfo.jsx';
+import { ResumeSection } from './components/ResumeSection.jsx';
 
 function ResumePreview() {
   return (

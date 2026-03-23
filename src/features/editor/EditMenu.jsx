@@ -1,4 +1,4 @@
-import { Button, createButtonData } from './ui/Button.jsx';
+import { Button, createButtonData } from '../../components/Button.jsx';
 
 function EditMenu() {
   const buttons = createButtonData(
