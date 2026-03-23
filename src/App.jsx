@@ -4,7 +4,7 @@ import { EditMenu } from './features/editor/EditMenu.jsx';
 import { ResumeForm } from './features/editor/ResumeForm.jsx';
 import { ResumePreview } from './features/preview/ResumePreview.jsx';
 
-export function App() {
+function App() {
   return (
     <>
       <header>
@@ -31,3 +31,5 @@ export function App() {
     </>
   );
 }
+
+export { App };
