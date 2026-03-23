@@ -8,7 +8,7 @@ function Field({ name, type }) {
 
 const createFieldData = (...fields) =>
   fields.map(([name, type = name]) => ({
-    keyId: crypto.randomUUID(),
+    key: crypto.randomUUID(),
     name,
     type,
   }));
