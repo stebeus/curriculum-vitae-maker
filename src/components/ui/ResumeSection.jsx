@@ -18,7 +18,7 @@ function ResumeSection({ title, subtitle, dates, children }) {
       <h2>{title}</h2>
       <h3>{subtitle}</h3>
       {children}
-      <p class="dates">
+      <p className="dates">
         {startDate} – {endDate}
       </p>
     </section>
