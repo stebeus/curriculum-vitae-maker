@@ -1,7 +1,7 @@
-function Pane({ title, children }) {
+function Pane({ name, children }) {
   return (
     <section className="pane">
-      <h2>{title}</h2>
+      <h2>{name}</h2>
       {children}
     </section>
   );

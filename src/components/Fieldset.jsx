@@ -8,8 +8,8 @@ const createFieldsetData = (...fieldsets) =>
   }));
 
 function Fieldset({ legend, fields }) {
-  const createField = ({ key, label, type }) => (
-    <Field key={key} label={label} type={type} />
+  const createField = ({ key, name, type }) => (
+    <Field key={key} name={name} type={type} />
   );
 
   return (

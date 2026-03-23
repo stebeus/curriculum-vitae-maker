@@ -1,14 +1,10 @@
 const createFieldData = (...fields) =>
-  fields.map(([label, type]) => ({
-    key: crypto.randomUUID(),
-    label,
-    type,
-  }));
+  fields.map(([name, type]) => ({ key: crypto.randomUUID(), name, type }));
 
-function Field({ label, type }) {
+function Field({ name, type }) {
   return (
     <label className="field">
-      {label}: <input type={type} name={label} />
+      {name}: <input type={type} name={name} />
     </label>
   );
 }
