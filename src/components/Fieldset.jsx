@@ -1,11 +1,15 @@
 import { Button } from './ui/Button.jsx';
-import { createFieldData } from './ui/Field.jsx';
+import { createFieldData, Field } from './ui/Field.jsx';
 
 function Fieldset({ legend, fields }) {
+  const createField = ({ key, name, type }) => (
+    <Field key={key} name={name} type={type} />
+  );
+
   return (
     <fieldset>
       <legend>{legend}</legend>
-      {fields}
+      {fields.map(createField)}
       <Button label="Save" />
     </fieldset>
   );
