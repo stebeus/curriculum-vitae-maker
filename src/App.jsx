@@ -11,7 +11,7 @@ function App() {
       <main></main>
       <footer>
         <p>
-          © Stebeus 2025.
+          {`© Stebeus 2025. `}
           <Link to="https://opensource.org/license/mit">MIT License</Link>
           <Link to="https://github.com/stebeus">GitHub</Link>
         </p>
