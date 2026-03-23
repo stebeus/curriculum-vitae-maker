@@ -1,8 +1,6 @@
-function Button({ label, dataAttrName = 'action', dataAttrValue }) {
-  const dataAttribute = { [`data-${dataAttrName}`]: dataAttrValue };
-
+function Button({ label, handler }) {
   return (
-    <button type="button" {...dataAttribute} onClick={dataAttrValue}>
+    <button type="button" data-action={`"${handler}"`} onClick={handler}>
       {label}
     </button>
   );
