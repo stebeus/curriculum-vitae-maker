@@ -1,14 +1,11 @@
-function createResumeSectionData(...resumeSections) {
-  const createResumeSection = ([title, subtitle, dates, ...children]) => ({
+const createResumeSectionData = (...resumeSections) =>
+  resumeSections.map(([title, subtitle, dates, ...children]) => ({
     key: crypto.randomUUID(),
     title,
     subtitle,
     dates,
     ...children,
-  });
-
-  return resumeSections.map(createResumeSection);
-}
+  }));
 
 function ResumeSection({ title, subtitle, dates, children }) {
   const [startDate, endDate] = dates;

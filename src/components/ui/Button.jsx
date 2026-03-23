@@ -1,14 +1,11 @@
-function createButtonData(...buttons) {
-  const createButton = ([dataAttrName, attrValue, handler, children]) => ({
+const createButtonData = (...buttons) =>
+  buttons.map(([dataAttrName, attrValue, handler, children]) => ({
     key: crypto.randomUUID(),
     dataAttrName,
     attrValue,
     handler,
     children,
-  });
-
-  return buttons.map(createButton);
-}
+  }));
 
 function Button({ dataAttrName, attrValue, handler, children }) {
   const dataAttr = { [`data-${dataAttrName}`]: attrValue };
