@@ -1,12 +1,3 @@
-const createResumeSectionData = (...resumeSections) =>
-  resumeSections.map(([title, subtitle, dates, ...children]) => ({
-    key: crypto.randomUUID(),
-    title,
-    subtitle,
-    dates,
-    ...children,
-  }));
-
 function ResumeSection({ title, subtitle, dates, children }) {
   const [startDate, endDate] = dates;
 
@@ -22,4 +13,4 @@ function ResumeSection({ title, subtitle, dates, children }) {
   );
 }
 
-export { createResumeSectionData, ResumeSection };
+export { ResumeSection };
