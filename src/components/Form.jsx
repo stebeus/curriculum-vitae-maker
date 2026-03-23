@@ -22,7 +22,7 @@ function Form() {
     ['position', 'text'],
     ['start-date', 'date'],
     ['end-date', 'date'],
-    ['description', 'text'],
+    ['description', 'textarea'],
   ];
 
   const fieldsets = createFieldsetData(personalDetails, education, experience);
