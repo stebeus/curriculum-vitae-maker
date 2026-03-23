@@ -1,3 +1,5 @@
+import { Link } from '../../../components/Link.jsx';
+
 const createUrlSchemes = (...urlSchemes) =>
   urlSchemes.map(([type, scheme]) => ({
     key: crypto.randomUUID(),
@@ -14,7 +16,7 @@ function ContactInfo({ channel, value }) {
 
   return (
     <p className="contact-info">
-      {channel}: <a href={`${urlScheme}:${value}`}>{value}</a>
+      {channel}: <Link to={`${urlScheme}:${value}`}>{value}</Link>
     </p>
   );
 }
