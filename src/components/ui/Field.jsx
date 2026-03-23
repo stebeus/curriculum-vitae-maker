@@ -1,6 +1,6 @@
 function Field({ name, type }) {
   return (
-    <label>
+    <label className="field">
       {name}: <input type={type} name={name} required />
     </label>
   );
