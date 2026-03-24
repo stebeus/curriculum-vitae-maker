@@ -24,9 +24,12 @@ export function Fieldset({ legend, fields }) {
   );
 }
 
-export const createFieldsetData = (...fieldsets) =>
-  fieldsets.map(([legend, ...fields]) => ({
-    key: crypto.randomUUID(),
+export function createFieldsetData(legend, ...fields) {
+  const state = {
     legend,
-    fields: createFieldData(...fields),
-  }));
+    fields: fields.map(createFieldData),
+    key: crypto.randomUUID(),
+  };
+
+  return Object.freeze({ ...state });
+}
