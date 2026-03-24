@@ -1,4 +1,6 @@
-export function Link({ to = '/', children }) {
+import { BASE_URL } from '../../constants.js';
+
+export function Link({ to = BASE_URL, children }) {
   const urlScheme = /http|https/;
   const isExternal = urlScheme.test(`${to}//:`);
 
