@@ -1,7 +1,7 @@
-export function Button({ label, type = 'button', handler }) {
+export function Button({ type = 'button', handler, children }) {
   return (
     <button type={type} onClick={handler}>
-      {label}
+      {children}
     </button>
   );
 }
