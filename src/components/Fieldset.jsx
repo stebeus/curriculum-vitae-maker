@@ -4,9 +4,11 @@ import { createFieldData, Field } from './ui/Field.jsx';
 
 function Fieldset({ legend, fields }) {
   const [IsReadonly, setIsReadonly] = useState(false);
+  const [btnLabel, setBtnLabel] = useState('Save');
 
   const handleSetIsReadonly = () => {
     setIsReadonly(!IsReadonly);
+    setBtnLabel(btnLabel === 'Save' ? 'Edit' : 'Save');
   };
 
   const createField = ({ key, name, type }) => (
@@ -17,7 +19,7 @@ function Fieldset({ legend, fields }) {
     <fieldset>
       <legend>{legend}</legend>
       {fields.map(createField)}
-      <Button label="Save" handler={handleSetIsReadonly} />
+      <Button label={btnLabel} handler={handleSetIsReadonly} />
     </fieldset>
   );
 }
