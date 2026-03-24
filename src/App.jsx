@@ -1,24 +1,15 @@
-import { ResumeForm } from './components/Form.jsx';
-import { Link } from './components/ui/Link.jsx';
+import { Footer } from './components/Footer.jsx';
+import { Header } from './components/Header.jsx';
+import { ResumeForm } from './components/ResumeForm.jsx';
 
 function App() {
   return (
     <>
-      <header>
-        <h1 className="logo">
-          <Link>Curriculum vitae maker</Link>
-        </h1>
-      </header>
+      <Header />
       <main>
         <ResumeForm />
       </main>
-      <footer>
-        <p>
-          {`© Stebeus 2025. `}
-          <Link to="https://opensource.org/license/mit">MIT License</Link>
-          <Link to="https://github.com/stebeus">GitHub</Link>
-        </p>
-      </footer>
+      <Footer />
     </>
   );
 }
