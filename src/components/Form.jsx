@@ -1,31 +1,31 @@
 import { createFieldsetData, Fieldset } from './Fieldset.jsx';
 
-function Form() {
-  const personalDetails = [
+export function Form() {
+  const personalDetails = createFieldsetData(
     'Personal details',
-    ['full-name', 'text'],
-    ['email'],
-    ['phone-number', 'tel'],
-  ];
+    ['Full name', 'text'],
+    ['Email', 'email'],
+    ['Phone number', 'tel'],
+  );
 
-  const education = [
+  const education = createFieldsetData(
     'Education',
-    ['school', 'text'],
-    ['field-of-study', 'text'],
-    ['start-date', 'date'],
-    ['end-date', 'date'],
-  ];
+    ['School', 'text'],
+    ['Field of study', 'text'],
+    ['Start date', 'date'],
+    ['End date', 'date'],
+  );
 
-  const experience = [
+  const experience = createFieldsetData(
     'Experience',
-    ['company', 'text'],
-    ['position', 'text'],
-    ['start-date', 'date'],
-    ['end-date', 'date'],
-    ['description', 'textarea'],
-  ];
+    ['Company', 'text'],
+    ['Position', 'text'],
+    ['Start date', 'date'],
+    ['End date', 'date'],
+    ['Description', 'textarea'],
+  );
 
-  const fieldsets = createFieldsetData(personalDetails, education, experience);
+  const fieldsets = [personalDetails, education, experience];
 
   const createFieldset = ({ key, legend, fields }) => (
     <Fieldset key={key} legend={legend} fields={fields} />
@@ -33,5 +33,3 @@ function Form() {
 
   return <form>{fieldsets.map(createFieldset)}</form>;
 }
-
-export { Form };
