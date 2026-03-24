@@ -1,24 +1,22 @@
-function Field({ name, type, hasReadOnlyProp }) {
-  const props = { name, readOnly: hasReadOnlyProp };
+export function Field({ label, type, isReadOnly }) {
+  const readOnly = { readOnly: isReadOnly };
 
-  const input = <input type={type} {...props} />;
-  const textarea = <textarea {...props}></textarea>;
+  const input = <input type={type} {...readOnly} />;
+  const textArea = <textarea {...readOnly}></textarea>;
 
-  const formControl = type === 'textarea' ? textarea : input;
+  const control = type === 'textarea' ? textArea : input;
 
   return (
-    // biome-ignore lint/a11y/noLabelWithoutControl: The form control is dynamically inserted.
+    // biome-ignore lint/a11y/noLabelWithoutControl: The control is defined conditionally.
     <label className="field">
-      {name}: {formControl}
+      {label}: {control}
     </label>
   );
 }
 
-const createFieldData = (...fields) =>
+export const createFieldData = (...fields) =>
   fields.map(([name, type = name]) => ({
     key: crypto.randomUUID(),
     name,
     type,
   }));
-
-export { createFieldData, Field };
