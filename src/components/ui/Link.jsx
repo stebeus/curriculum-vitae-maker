@@ -1,17 +1,15 @@
-function Link({ to = '/', children }) {
-  const protocols = /http|https/;
-  const isExternal = protocols.test(`${to}//:`);
+export function Link({ to = '/', children }) {
+  const urlScheme = /http|https/;
+  const isExternal = urlScheme.test(`${to}//:`);
 
-  const targetBlank = isExternal && {
+  const hasTargetBlank = isExternal && {
     target: '_blank',
     rel: 'noopener noreferrer',
   };
 
   return (
-    <a href={to} {...targetBlank}>
+    <a href={to} {...hasTargetBlank}>
       {children}
     </a>
   );
 }
-
-export { Link };
