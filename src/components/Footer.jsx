@@ -8,7 +8,7 @@ export function Footer() {
         {`© Stebeus 2026. `}
         <Link to="http://opensource.org/license/mit">MIT License</Link>
         <Link to="http://github.com/stebeus">
-          <SocialIcon brand="github" />
+          <SocialIcon brand="github" alt="GitHub profile" />
         </Link>
       </p>
     </footer>
