@@ -1,9 +1,7 @@
-function Button({ label, handler }) {
+export function Button({ label, type = 'button', handler }) {
   return (
-    <button type="button" data-action={`"${handler}"`} onClick={handler}>
+    <button type={type} onClick={handler}>
       {label}
     </button>
   );
 }
-
-export { Button };
