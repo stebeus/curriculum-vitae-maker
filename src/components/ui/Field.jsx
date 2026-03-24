@@ -14,9 +14,8 @@ export function Field({ label, type, isReadOnly }) {
   );
 }
 
-export const createFieldData = (...fields) =>
-  fields.map(([name, type = name]) => ({
-    key: crypto.randomUUID(),
-    name,
-    type,
-  }));
+export function createFieldData([label, type]) {
+  const state = { label, type, key: crypto.randomUUID() };
+
+  return Object.freeze({ ...state });
+}
