@@ -1,4 +1,4 @@
-import { Form } from './components/Form.jsx';
+import { ResumeForm } from './components/Form.jsx';
 import { Link } from './components/ui/Link.jsx';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         </h1>
       </header>
       <main>
-        <Form />
+        <ResumeForm />
       </main>
       <footer>
         <p>

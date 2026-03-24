@@ -1,6 +1,6 @@
 import { createFieldsetData, Fieldset } from './Fieldset.jsx';
 
-export function Form() {
+export function ResumeForm() {
   const personalDetails = createFieldsetData(
     'Personal details',
     ['Full name', 'text'],
