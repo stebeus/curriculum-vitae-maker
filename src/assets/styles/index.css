@@ -32,6 +32,14 @@
     --font-primary: var(--fw-regular) var(--fs-md) var(--ff);
     --font-heading: var(--fw-medium) var(--fs-lg) var(--ff);
     --font-logo: var(--fw-bold) var(--fs-xl) var(--ff);
+
+    /* Spacing */
+    --space-xxs: 0.375rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.25rem;
+    --space-xl: 1.5rem;
   }
 
   #root {
