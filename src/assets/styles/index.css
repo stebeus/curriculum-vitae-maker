@@ -33,4 +33,13 @@
     --font-heading: var(--fw-medium) var(--fs-lg) var(--ff);
     --font-logo: var(--fw-bold) var(--fs-xl) var(--ff);
   }
+
+  #root {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0 1fr);
+    min-height: 100dvh;
+    font: var(--font-primary);
+    color: var(--color-contentMuted);
+  }
 }
