@@ -28,8 +28,8 @@ export function Fieldset({ legend, fields }) {
       <legend>{legend}</legend>
       {fields.map(createField)}
       <Button handler={handleFieldSave}>
-        {buttonLabel}
         {buttonIcon}
+        {buttonLabel}
       </Button>
     </fieldset>
   );
