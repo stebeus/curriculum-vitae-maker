@@ -9,7 +9,8 @@ export function Field({ label, type, isReadOnly }) {
   return (
     // biome-ignore lint/a11y/noLabelWithoutControl: The control is defined conditionally.
     <label className="field">
-      {label}: {control}
+      <span className="label">{label}:</span>
+      {control}
     </label>
   );
 }
