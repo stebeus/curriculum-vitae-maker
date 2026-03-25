@@ -43,3 +43,22 @@
     color: var(--color-contentMuted);
   }
 }
+
+@layer components {
+  @scope (header) {
+    padding: 0.5rem;
+    color: var(--color-base);
+    background-color: var(--color-accent);
+
+    .logo {
+      font: var(--font-logo);
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    a {
+      color: currentColor;
+      text-decoration: none;
+    }
+  }
+}
