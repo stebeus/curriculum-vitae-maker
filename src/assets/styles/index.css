@@ -17,7 +17,7 @@
     --color-mg: oklch(from var(--color-base) calc(l - 0.05) c h);
     --color-bg: oklch(from var(--color-base) calc(l - 0.1) c h);
     --color-content: oklch(0.16 0 0);
-    --color-contentMuted: oklch(from var(--color-base) calc(l + 0.26) c h);
+    --color-contentMuted: oklch(from var(--color-content) calc(l + 0.26) c h);
     --color-accent: oklch(0.48 0.13 256);
 
     /* Typography */
