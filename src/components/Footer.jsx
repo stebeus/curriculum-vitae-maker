@@ -4,13 +4,13 @@ import { SocialIcon } from './ui/SocialIcon.jsx';
 export function Footer() {
   return (
     <footer>
-      <p>
+      <p className="copyright">
         {`© Stebeus 2026. `}
         <Link to="http://opensource.org/license/mit">MIT License</Link>
-        <Link to="http://github.com/stebeus">
-          <SocialIcon brand="github" alt="GitHub profile" />
-        </Link>
       </p>
+      <Link to="http://github.com/stebeus">
+        <SocialIcon brand="github" alt="GitHub profile" />
+      </Link>
     </footer>
   );
 }
