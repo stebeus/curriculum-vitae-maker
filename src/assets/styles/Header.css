@@ -1,0 +1,20 @@
+header {
+  padding: var(--space-xs);
+  color: white;
+  background-color: var(--color-accent);
+}
+
+.logo {
+  font: var(--font-logo);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+
+  &:hover {
+    color: color-mix(in oklch, currentColor, var(--color-content) 10%);
+  }
+}

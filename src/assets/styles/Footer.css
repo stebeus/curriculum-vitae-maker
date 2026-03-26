@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-sm);
+  background-color: var(--color-base);
+}
+.copyright::after {
+  margin: 0 var(--space-sm);
+  color: var(--color-border);
+  content: '|';
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-content);
+    text-decoration: underline;
+  }
+}
