@@ -1,4 +1,5 @@
 import { createFieldsetData, Fieldset } from './Fieldset.jsx';
+import '../assets/styles/ResumeForm.css';
 
 export function ResumeForm() {
   const personalDetails = createFieldsetData(

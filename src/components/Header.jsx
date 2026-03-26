@@ -1,5 +1,6 @@
 import { Link } from './ui/Link.jsx';
-
+import '../assets/styles/Header.css'
+;
 export function Header() {
   return (
     <header>

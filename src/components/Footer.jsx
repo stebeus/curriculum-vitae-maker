@@ -1,5 +1,6 @@
 import { Link } from './ui/Link.jsx';
 import { SocialIcon } from './ui/SocialIcon.jsx';
+import '../assets/styles/Footer.css';
 
 export function Footer() {
   return (
