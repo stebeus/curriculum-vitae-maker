@@ -26,7 +26,7 @@ export function Fieldset({ legend, fields }) {
   return (
     <fieldset>
       <legend>{legend}</legend>
-      {fields.map(createField)}
+      <div className="container">{fields.map(createField)}</div>
       <Button handler={handleFieldSave}>
         {buttonIcon}
         {buttonLabel}
